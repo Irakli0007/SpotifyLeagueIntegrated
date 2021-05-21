@@ -4,7 +4,6 @@ const app = require('electron')
 const BrowserWindow = require('electron').remote.BrowserWindow
 const { Http2ServerRequest } = require("http2")
 const https = require('https')
-const nfetch = require('node-fetch')
 
 async function getData() {
     const { stdout, stderr } = await exec("wmic PROCESS WHERE name='LeagueClientUx.exe' GET commandline")
@@ -22,7 +21,7 @@ var leagueAPIReturn = ""
 async function callLocalLeagueApi(port, password, endpoint) {
     var url = "https://127.0.0.1:" + port + endpoint
     const agent = new https.Agent({rejectUnauthorized:false})
-    await nfetch(url, {
+    await fetch(url, {
         method: "GET",
         headers: {
             Authorization: "Basic " + Buffer.from("riot:" + password).toString('base64'),
