@@ -95,3 +95,7 @@ document.getElementById("listenBtn").addEventListener("click", async () => {
         console.log("login first")
     }
 })
+
+document.getElementById("mappingsBtn").addEventListener("click", async () => {
+    window.location.pathname = "D:\\Github\\SpotifyLeagueIntegration\\src\\mappings.html"
+})
