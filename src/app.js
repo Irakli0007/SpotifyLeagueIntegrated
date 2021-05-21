@@ -49,8 +49,6 @@ async function getSpotifyToken() {
     })
 }
 
-spotifyApiDeviceDataReturn = ""
-
 async function playSpotify() {
     var endpoint = "https://api.spotify.com/v1/me/player/play"
     await fetch(endpoint, {
@@ -76,10 +74,10 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
     spotifyToken = token
     leagueData = data
 
-    //getData().then(result => callLocalLeagueApi(result[0], result[1], "/lol-summoner/v1/current-summoner"))
-    //getData().then(result => callLocalLeagueApi(result[0], result[1], "/lol-match-history/v1/recently-played-summoners"))
-    //getData().then(result => callLocalLeagueApi(result[0], result[1], "/lol-lobby/v2/lobby/members"))
-    //getData().then(result => callLocalLeagueApi(result[0], result[1], "/lol-champ-select/v1/current-champion"))
+    //"/lol-summoner/v1/current-summoner"))
+    //"/lol-match-history/v1/recently-played-summoners"))
+    //"/lol-lobby/v2/lobby/members"))
+    //"/lol-champ-select/v1/current-champion"))
 })
 
 document.getElementById("listenBtn").addEventListener("click", async () => {
