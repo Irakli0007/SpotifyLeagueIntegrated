@@ -8,7 +8,6 @@ var readFile = function(path) {
 var text = readFile("champions.txt")
 var champions = JSON.parse(text)
 
-var x = ""
 for(const [key, value] of Object.entries(champions.data)) {
     var btn = document.createElement("BUTTON") 
     btn.innerHTML = value.name

@@ -1,14 +1,12 @@
 const util = require("util")
 const exec = util.promisify(require('child_process').exec)
-const app = require('electron')
 const BrowserWindow = require('electron').remote.BrowserWindow
-const { Http2ServerRequest } = require("http2")
 const https = require('https')
 
 async function getData() {
     const { stdout, stderr } = await exec("wmic PROCESS WHERE name='LeagueClientUx.exe' GET commandline")
-    // console.log('stout:', stdout)
-    // console.log('stderr:', stderr)
+    console.log('stout:', stdout)
+    console.log('stderr:', stderr)
     let regexp = /--app-port=([0-9]*)/
     let regexp2 = /--remoting-auth-token=([\w-_]*)/
     var str = stdout.match(regexp)
@@ -20,7 +18,7 @@ var leagueAPIReturn = ""
 
 async function callLocalLeagueApi(port, password, endpoint) {
     var url = "https://127.0.0.1:" + port + endpoint
-    const agent = new https.Agent({rejectUnauthorized:false})
+    const agent = new https.Agent({ rejectUnauthorized:false })
     await fetch(url, {
         method: "GET",
         headers: {
@@ -38,7 +36,7 @@ async function getSpotifyToken() {
     var redirect_uri = "http://localhost/callback"
     var spotifyURL = `https://accounts.spotify.com/authorize?client_id=1313a38061744d86a9537ef2bd563767&redirect_uri=${redirect_uri}&response_type=token&state=123&scope=user-read-private%20user-read-email%20user-top-read%20user-read-playback-state%20user-modify-playback-state`
     const authWindow = window.open(spotifyURL, "Spotify Auth", "top=600,left=800,frame=true,nodeintegration=no")
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         setTimeout(function() {
             BrowserWindow.getAllWindows()[0].webContents.on('did-redirect-navigation', function(event, url) {
                 var access_token = url.split("#access_token=").pop().split("&token_type=")[0]
@@ -79,6 +77,7 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
     //"/lol-lobby/v2/lobby/members"))
     //"/lol-champ-select/v1/current-champion"))
 })
+
 
 document.getElementById("listenBtn").addEventListener("click", async () => {
     if (leagueData[0] != undefined && leagueData[1] != undefined) {
