@@ -1,48 +1,46 @@
 <template>
   <v-app>
-    <app-bar></app-bar>
-    <heading></heading>
-    <mapping
-      v-if="mappingEnabled"
-      @home="onHome()"
-    >
-    </mapping>
-    <div v-else>
-      <v-container>
-        <v-row justify="center">
-          <v-btn id="loginBtn" color=#1DB954 class="mx-4">Login</v-btn>
-          <v-btn id="listenBtn" color=#1DB954 class="mx-4">Start Listening</v-btn>
-          <v-btn id="mappingBtn" color=#1DB954 class="mx-4" @click="goToMapping()">Mapping</v-btn>
-        </v-row>
-      </v-container>
-      
-      <v-container>
-        <v-row v-if="this.loggingIn" class="mt-12" justify="center">
-          <v-progress-circular
-            indeterminate
-            color=#1DB954
-            :size="70"
-            :width="5"
-          >
-          </v-progress-circular>
-        </v-row>
-      </v-container>
-    </div>
+    <template>
+      <div class="mb-4">
+        <v-app-bar color=#1DB954 dense>
+        </v-app-bar>
+      </div>
+    </template>
+
+    <v-container>
+      <v-row justify="center" align="center" class="mx-4 my-4">
+        <v-img :src="leagueLogo" max-height="288" max-width="512" class="mx-4"></v-img>
+        <div class="plus"></div>
+        <v-img :src="spotifyLogo" max-height="288" max-width="512" class="mx-4"></v-img>
+      </v-row>
+    </v-container>
+
+    <v-container>
+      <v-row justify="center">
+        <v-btn id="loginBtn" color=#1DB954 class="mx-4">Login</v-btn>
+        <v-btn id="listenBtn" color=#1DB954 class="mx-4">Start Listening</v-btn>
+        <v-btn id="mappingBtn" color=#1DB954 class="mx-4">Mapping</v-btn>
+      </v-row>
+    </v-container>
+    
+    <v-container>
+      <v-row v-if="this.loggingIn" class="mt-12" justify="center">
+        <v-progress-circular
+          indeterminate
+          color=#1DB954
+          :size="70"
+          :width="5"
+        >
+        </v-progress-circular>
+      </v-row>
+    </v-container>
+    
   </v-app>
 </template>
 
 <script>
-  import Mapping from './components/Mapping.vue'
-  import AppBar from './components/AppBar.vue'
-  import Heading from './components/Heading.vue'
 
   export default {
-    components: {
-      Mapping,
-      AppBar,
-      Heading
-    },
-
     name: "App",
 
     loggingIn: false,
@@ -99,13 +97,6 @@
         })
       },
 
-      onHome() {
-        this.mappingEnabled = false
-      },
-
-      goToMapping() {
-        this.mappingEnabled = true
-      }
     },
 
     mounted() {
@@ -140,6 +131,11 @@
           console.log("login first")
         }
       })
+
+      document.getElementById("mappingBtn").addEventListener("click", async () => {
+        window.ipcRenderer.send("sendRouteRequest", "/Mapping")
+        console.log(window.location.href)
+      })
       
     },
 
@@ -147,8 +143,7 @@
       return {
         leagueLogo: require(`@/assets/league_logo.jpg`),
         spotifyLogo: require(`@/assets/spotify_logo.jpg`),
-        loggingIn: false,
-        mappingEnabled: false,
+        loggingIn: false
       }
     }
 

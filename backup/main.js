@@ -100,6 +100,20 @@ ipcMain.on("CallLeagueApi", async (event, arg) => {
   })
 })
 
+ipcMain.on("sendRouteRequest", async (event, arg) => {
+  routeTo(arg)
+})
+
+function routeTo(route) {
+  if (isDevelopment) {
+    console.log("in dev, route = " + route)
+    BrowserWindow.getAllWindows()[0].loadURL("http://localhost:8080" + route)
+  } else {
+    BrowserWindow.getAllWindows()[0].loadURL(path.join(__dirname, 'index.html' + route))
+  }
+}
+
+
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
