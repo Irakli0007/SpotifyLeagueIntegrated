@@ -2,55 +2,35 @@
   <v-app>
     <app-bar></app-bar>
     <heading></heading>
-    <mapping
-      v-if="mappingEnabled"
-      @home="onHome()"
-    >
-    </mapping>
-    <div v-else>
-      <v-container>
-        <v-row justify="center">
-          <v-btn id="loginBtn" color=#1DB954 class="mx-4">Login</v-btn>
-          <v-btn id="listenBtn" color=#1DB954 class="mx-4">Start Listening</v-btn>
-          <v-btn id="mappingBtn" color=#1DB954 class="mx-4" @click="goToMapping()">Mapping</v-btn>
-        </v-row>
-      </v-container>
-      
-      <v-container>
-        <v-row v-if="this.loggingIn" class="mt-12" justify="center">
-          <v-progress-circular
-            indeterminate
-            color=#1DB954
-            :size="70"
-            :width="5"
-          >
-          </v-progress-circular>
-        </v-row>
-      </v-container>
-    </div>
+    <menu-bar></menu-bar>
+    <v-container>
+      <v-row v-if="this.loggingIn" class="mt-12" justify="center">
+        <v-progress-circular
+          indeterminate
+          color=#1DB954
+          :size="70"
+          :width="5"
+        >
+        </v-progress-circular>
+      </v-row>
+    </v-container>
+    <router-view></router-view>
   </v-app>
 </template>
 
 <script>
-  import Mapping from './components/Mapping.vue'
   import AppBar from './components/AppBar.vue'
   import Heading from './components/Heading.vue'
+  import MenuBar from './components/MenuBar.vue'
 
   export default {
     components: {
-      Mapping,
+      MenuBar,
       AppBar,
       Heading
     },
-
+  
     name: "App",
-
-    loggingIn: false,
-    leagueLogo: "",
-    spotifyLogo: "",
-    leagueAPIReturn: "",
-    leagueData: [],
-    spotifyToken: "",
 
     methods: {
       async getSpotifyToken() {
@@ -99,13 +79,6 @@
         })
       },
 
-      onHome() {
-        this.mappingEnabled = false
-      },
-
-      goToMapping() {
-        this.mappingEnabled = true
-      }
     },
 
     mounted() {
@@ -141,14 +114,15 @@
         }
       })
       
+      setInterval(async () => {
+        console.log(window.location.href)
+      }, 3000)
+
     },
 
     data() {
       return {
-        leagueLogo: require(`@/assets/league_logo.jpg`),
-        spotifyLogo: require(`@/assets/spotify_logo.jpg`),
         loggingIn: false,
-        mappingEnabled: false,
       }
     }
 
@@ -157,18 +131,5 @@
 </script>
 
 <style scoped>
-  .plus {
-    display:inline-block;
-    width:100px;
-    height:100px;
-    
-    background:
-      linear-gradient(#fff,#fff),
-      linear-gradient(#fff,#fff),
-      #000;
-    background-position:center;
-    background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
-    background-repeat:no-repeat;
-    border-radius:50%;
-  }
+  
 </style>
