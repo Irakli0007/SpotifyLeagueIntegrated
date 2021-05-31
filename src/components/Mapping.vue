@@ -1,19 +1,19 @@
 <template>
   <div>
-      <v-col class="mx-auto" cols=4>
-        <v-textarea
-          color=#1DB954
-          label="Search"
-          auto-grow
-          outlined
-          rows="1"
-          @keydown.enter.exact.prevent
-          @keyup.enter.exact="search"
-          v-model="searchStr"
-        ></v-textarea>
-      </v-col>
+    <v-col class="mx-auto" cols=4>
+      <v-textarea
+        color=#1DB954
+        label="Search"
+        auto-grow
+        outlined
+        rows="1"
+        @keydown.enter.exact.prevent
+        @keyup.enter.exact="search"
+        v-model="searchStr"
+      ></v-textarea>
+    </v-col>
     <v-row>
-      <template v-for="item in champions">
+      <template v-for="item in results">
         <v-col cols="2" :key="item.id">
           <v-card class="mx-6 my-6" :id="`${item.id}`">
             <v-card-title>{{ item.name }}</v-card-title>
@@ -31,8 +31,9 @@
     </v-row>
   </div>
 </template>
-<script>
 
+
+<script>
 
 export default {
   name: "Mapping",
@@ -51,12 +52,27 @@ export default {
     search() {
       location.href = "#"
       location.href = "#" + this.searchStr
-    }
+    },
 
+    /* eslint-disable no-unused-vars */
+    myFilter(str) {
+      const arr = []
+      for (const [key, value] of Object.entries(this.champions)) {
+        arr.push(value)
+      }
+      return arr.filter(name => name.id.toLowerCase().includes(str.toLowerCase()))
+    },
   },
 
-  created() {
-
+  computed: {
+    results() {
+      if (this.searchStr) {
+        return this.myFilter(this.searchStr)
+      }
+      else {
+        return this.champions
+      }
+    }
   },
 
   mounted() {
@@ -71,23 +87,24 @@ export default {
       })
     })
   },
+  
 
   data() {
     return {
       champions: "",
       version: "",
-      searchStr: ""
+      searchStr: "",
     }
   }
 
 }
 </script>
 
+
 <style scoped>
 
   .v-text-field--outlined >>> fieldset {
     border-color: #1DB954;
-    
   }
 
 

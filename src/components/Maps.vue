@@ -10,11 +10,11 @@ export default {
     this.champion = this.$route.params.data
   },
 
-
   data() {
     return {
       champion: ""
     }
   }
+
 }
 </script>
