@@ -1,8 +1,8 @@
 <template>
   <div>
     <v-dialog v-model="dialog" width="1600">
-      <v-card>
-        <v-card-title>Mapping Songs For {{ championData.name }}</v-card-title>
+      <v-card min-height="400">
+        <v-card-title class="justify-center" id="card-title">Mapping Songs For {{ championData.name }}</v-card-title>
         <v-col class="mx-auto" cols=4>
           <v-textarea
             color=#1DB954
@@ -17,11 +17,15 @@
           <v-btn @click="onBack()" color=#1DB954>Back</v-btn>
         </v-col>
         <div>
-          <v-row justify="center" v-for="item in songResults.items" :key="item.id">
-            <v-card>
-              <v-card-title>{{ item.name }}</v-card-title>
-              
-            </v-card>
+          <v-row>
+            <template v-for="item in songResults.items">
+              <v-col cols=2 :key="item.id">
+                <v-card color=#1DB954 class="mx-4 my-4">
+                  <v-card-title>{{ item.name }}</v-card-title>
+                  <v-img :src="item.album.images[0].url" max-width="300" max-height="300"></v-img>
+                </v-card>
+              </v-col>
+            </template>
           </v-row>
         </div>
       </v-card>
@@ -50,7 +54,6 @@ export default {
           this.songResults = results.tracks
         })
       })
-      console.log(this.songResults)
     }
 
   },
@@ -77,4 +80,11 @@ export default {
   .v-text-field--outlined >>> fieldset {
     border-color: #1DB954;
   }
+
+  #card-title {
+    color:#1DB954;
+    font-size: 36px;
+
+  }
+
 </style>
