@@ -18,10 +18,9 @@ const routes = [
     component: Mapping
   },
   {
-    path: '/map',
-    name: 'Map',
+    path: '/maps/',
+    name: 'Maps',
     component: Maps,
-    props: true
   }
 ]
 

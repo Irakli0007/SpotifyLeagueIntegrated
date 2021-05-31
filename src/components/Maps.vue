@@ -1,12 +1,19 @@
 <template>
-  <h2>{{ item }}</h2>
+  <div>
+    <h2>{{ champion }}</h2>
+  </div>
 </template>
 
 <script>
 export default {
-  props: {
-    item: {
-      type: String,
+  mounted() {
+    this.champion = this.$route.params.data
+  },
+
+
+  data() {
+    return {
+      champion: ""
     }
   }
 }
