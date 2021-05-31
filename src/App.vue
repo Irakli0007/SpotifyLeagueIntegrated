@@ -2,7 +2,7 @@
   <v-app>
     <app-bar></app-bar>
     <heading></heading>
-    <menu-bar></menu-bar>
+    <menu-bar :token="spotify_Token"></menu-bar>
     <v-container>
       <v-row v-if="this.loggingIn" class="mt-12" justify="center">
         <v-progress-circular
@@ -119,10 +119,16 @@
       }, 3000)
 
     },
+    computed: {
+      spotify_Token() {
+        return this.spotifyToken
+      }
+    },
 
     data() {
       return {
         loggingIn: false,
+        spotifyToken: ""
       }
     }
 

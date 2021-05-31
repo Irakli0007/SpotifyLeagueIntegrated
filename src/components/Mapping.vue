@@ -21,7 +21,7 @@
             <v-img max-width="120" max-height="120" :src="`http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${item.id}.png`"></v-img>
             <v-list-item @click="map(item)">
               <v-list-item-icon>
-              <!-- <v-icon color="#1DB954"></v-icon> -->
+              <v-icon color="#1DB954">mdi-music</v-icon>
               </v-list-item-icon>
               <v-list-item-title>Map {{ item.name }}</v-list-item-title>
             </v-list-item>
@@ -33,6 +33,7 @@
       v-if="mapping" 
       @back="onBack()"
       :championData="currentChampion"
+      :token="spotify_token"
     >
     </maps>
   </div>
@@ -91,7 +92,11 @@
         else {
           return this.champions
         }
+      },
+      spotify_token() {
+        return this.$route.params.spotify_Token
       }
+
     },
 
     mounted() {
@@ -107,6 +112,9 @@
       })
     },
     
+    created() {
+      
+    },
 
     data() {
       return {
@@ -114,7 +122,7 @@
         version: "",
         searchStr: "",
         mapping: false,
-        currentChampion: ""
+        currentChampion: "",
       }
     }
 

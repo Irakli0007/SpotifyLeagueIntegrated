@@ -7,7 +7,7 @@
         </router-link>
         <v-btn id="loginBtn" color=#1DB954 class="mx-4">Login</v-btn>
         <v-btn id="listenBtn" color=#1DB954 class="mx-4">Start Listening</v-btn>
-        <router-link to="/mapping">
+        <router-link v-if="spotify_Token" :to="{ name: 'Mapping', params: { spotify_Token: spotify_Token } }">
           <v-btn id="mappingBtn" color=#1DB954 class="mx-4">Mapping</v-btn>
         </router-link>
       </v-row>
@@ -17,7 +17,29 @@
 
 
 <script>
-export default {
-    
-}
+  export default {
+    props: ['token'],
+
+    mounted() {
+
+    },
+
+    created() {
+
+    },
+
+    data() {
+      return {
+        
+      }
+
+    },
+
+    computed: {
+      spotify_Token() {
+        return this.token
+      }
+    }
+
+  }
 </script>
