@@ -54,14 +54,8 @@
 
       /* eslint-disable no-unused-vars */
       map(item) {
-        // this.$router.push({
-        //   name: "Maps", 
-        //   params: { 
-        //     data: item 
-        //   }
-        // })
-        this.mapping = true
         this.currentChampion = item
+        this.mapping = true
       },
 
       onBack() {

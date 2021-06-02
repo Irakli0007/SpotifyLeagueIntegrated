@@ -9,6 +9,7 @@ const exec = util.promisify(require('child_process').exec)
 const https = require('https')
 const agent = new https.Agent({ rejectUnauthorized:false })
 const fetch = require('node-fetch')
+const fs = require('fs')
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
@@ -98,6 +99,30 @@ ipcMain.on("CallLeagueApi", async (event, arg) => {
       event.reply("ReturnCallLeagueApi", data)
     })
   })
+})
+
+ipcMain.on("SaveMusicToChampion", async (event, arg) => {
+  try {
+    if (fs.existsSync('./static/ChampionSongMapping.txt')) {
+      console.log("file exists")
+      //todo append the file
+    }
+    else {
+      console.log("file does not exist")
+      var content = "hello world!"
+      fs.writeFile('./static/ChampionSongMapping.txt', content, function (err) {
+        if (err) {
+          throw err
+        }
+        console.log("saved")
+      })
+      //todo append the file
+    }
+  }
+  catch(e) {
+    console.log(e)
+  }
+  event.reply("ReturnSaveMusicToChampion", true)
 })
 
 

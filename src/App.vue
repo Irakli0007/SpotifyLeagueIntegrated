@@ -113,10 +113,6 @@
           console.log("login first")
         }
       })
-      
-      setInterval(async () => {
-        console.log(window.location.href)
-      }, 3000)
 
     },
     computed: {
