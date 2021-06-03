@@ -103,26 +103,71 @@ ipcMain.on("CallLeagueApi", async (event, arg) => {
 
 ipcMain.on("SaveMusicToChampion", async (event, arg) => {
   try {
-    if (fs.existsSync('./static/ChampionSongMapping.txt')) {
-      console.log("file exists")
-      //todo append the file
-    }
-    else {
-      console.log("file does not exist")
-      var content = "hello world!"
-      fs.writeFile('./static/ChampionSongMapping.txt', content, function (err) {
+    if (!fs.existsSync('./static/ChampionSongMapping.txt')) {
+      fs.readFile('./static/blank_champions.txt', 'utf-8', function(err, data) {
         if (err) {
           throw err
         }
-        console.log("saved")
+        var championMapping = JSON.parse(data.toString())
+        if (arg.method == "song") {
+          championMapping[arg.champion].Songs = arg.music
+        }
+        else if (arg.method == "playlist") {
+          championMapping[arg.champion].Playlist = arg.music
+        }
+        fs.writeFile('./static/ChampionSongMapping.txt', JSON.stringify(championMapping, null, 2), function (err) {
+          if (err) {
+            throw err
+          }
+        })
       })
-      //todo append the file
+    }
+    else {
+      fs.readFile('./static/ChampionSongMapping.txt', function(err, data) {
+        if (err) {
+          throw err
+        }
+        var championMapping = JSON.parse(data.toString())
+        if (arg.method == "song") {
+          championMapping[arg.champion].Songs = arg.music
+        }
+        else if (arg.method == "playlist") {
+          championMapping[arg.champion].Playlist = arg.music
+        }
+        fs.writeFile('./static/ChampionSongMapping.txt', JSON.stringify(championMapping, null, 2), function (err) {
+          if (err) {
+            throw err
+          }
+        })
+      })
     }
   }
   catch(e) {
     console.log(e)
   }
   event.reply("ReturnSaveMusicToChampion", true)
+})
+
+ipcMain.on("GetCurrentMapping", async (event, arg) => {
+  try {
+    if (!fs.existsSync('./static/ChampionSongMapping.txt')) {
+      var ret = []
+      event.reply("ReturnCurrentMapping", ret)
+    }
+    else {
+      fs.readFile('./static/ChampionSongMapping.txt', function(err, data) {
+        if (err) {
+          throw err
+        }
+        var championMapping = JSON.parse(data.toString())
+        var ret = championMapping[arg.champion].Songs
+        event.reply("ReturnCurrentMapping", ret)
+      })
+    }
+  }
+  catch(e) {
+    console.log(e)
+  }
 })
 
 

@@ -63,21 +63,63 @@
         })
       },
 
+      /* eslint-disable no-unused-vars */
       async playSpotify() {
-        var endpoint = "https://api.spotify.com/v1/me/player/play"
-        await fetch(endpoint, {
-          method: "PUT",
-          headers: {
-            Authorization: `Bearer ${this.spotifyToken}`,
-          },
-          body: JSON.stringify({
-            "uris": ["spotify:track:4bcMxSXijaZ9cGXynsRD3I"],
-            "position_ms": 125000
-          }),
-        }).then(async (result) => {
-          console.log(result)
+        if(this.leagueAPIReturn != "" && this.leagueAPIReturn.httpStatus != 404) {
+          await this.getChampionSongs(this.leagueAPIReturn).then(async (championSongs) => {
+            if (championSongs.songs.length > 1) {
+              var endpoint = "https://api.spotify.com/v1/me/player/play"
+              await fetch(endpoint, {
+                method: "PUT",
+                headers: {
+                  Authorization: `Bearer ${this.spotifyToken}`,
+                },
+                body: JSON.stringify({
+                  //"uris": ["spotify:track:4bcMxSXijaZ9cGXynsRD3I"],
+                  "uris": championSongs.songs.map(item => item.uri),
+                  "position_ms": 0
+                }),
+              }).then(async (result) => {
+                console.log(result)
+              })
+            }
+          })
+        }
+      },
+
+      /* eslint-disable no-unused-vars */
+      async getChampionSongs(champID) {
+        await fetch("http://ddragon.leagueoflegends.com/cdn/11.11.1/data/en_US/champion.json").then(async (result) => {
+          result.json().then(async (data) => {
+            for (const [key, value] of Object.entries(data.data)) {
+              if (value.key == champID.toString()) {
+                var championSongs = {
+                  championName: value.name,
+                  songs: await this.getSongs(value.name)
+                }
+                return championSongs
+              }
+            }
+            var championSongsBlank = {
+              championName: "",
+              songs: []
+            }
+            return championSongsBlank
+          })
         })
       },
+
+      getSongs(champName) {
+        var data = { 
+          champion: champName
+        }
+        window.ipcRenderer.send("GetCurrentMapping", data)
+        window.ipcRenderer.on("ReturnCurrentMapping", (event, arg) => {
+          console.log(arg)
+          return arg
+        })
+        
+      }
 
     },
 
@@ -100,14 +142,13 @@
       document.getElementById("listenBtn").addEventListener("click", async () => {
         if (this.leagueData != undefined) {
           console.log("listening")
-          var poll = setInterval(async () => {
-            await this.callLocalLeagueApi(this.leagueData[0], this.leagueData[1], "/lol-champ-select/v1/current-champion")
-            //leagueAPIReturn = 105 //remove this later
-            if (this.leagueAPIReturn == 105) {
-              clearInterval(poll)
-              await this.playSpotify()
+          setInterval(async () => {
+            await this.callLocalLeagueApi(this.leagueData[0], this.leagueData[1], "/lol-champ-select/v1/current-champion")            
+            if (this.leagueAPIReturn != "" && this.leagueAPIReturn.httpStatus != 404) {
+              //clearInterval(poll)
+              await this.playSpotify()    
             }
-          }, 1000);
+          }, 3000);
         }
         else {
           console.log("login first")
@@ -124,7 +165,8 @@
     data() {
       return {
         loggingIn: false,
-        spotifyToken: ""
+        spotifyToken: "",
+        leagueAPIReturn: ""
       }
     }
 
