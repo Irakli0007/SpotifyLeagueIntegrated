@@ -22,6 +22,7 @@
   import AppBar from './components/AppBar.vue'
   import Heading from './components/Heading.vue'
   import MenuBar from './components/MenuBar.vue'
+  import champSongMap from '../static/ChampionSongMapping.json'
 
   export default {
     components: {
@@ -65,51 +66,55 @@
 
       /* eslint-disable no-unused-vars */
       async playSpotify() {
-        if(this.leagueAPIReturn != "" && this.leagueAPIReturn.httpStatus != 404) {
-          await this.getChampionSongs(this.leagueAPIReturn).then(async (championSongs) => {
-            if (championSongs.songs.length > 1) {
-              var endpoint = "https://api.spotify.com/v1/me/player/play"
-              await fetch(endpoint, {
-                method: "PUT",
-                headers: {
-                  Authorization: `Bearer ${this.spotifyToken}`,
-                },
-                body: JSON.stringify({
-                  //"uris": ["spotify:track:4bcMxSXijaZ9cGXynsRD3I"],
-                  "uris": championSongs.songs.map(item => item.uri),
-                  "position_ms": 0
-                }),
-              }).then(async (result) => {
-                console.log(result)
-              })
-            }
-          })
-        }
+        console.log(this.leagueAPIReturn)
+        await this.getChampionSongs(this.leagueAPIReturn)
+        .then(championSongs => {
+          console.log(championSongs)
+          if (championSongs.length > 1) {
+            var endpoint = "https://api.spotify.com/v1/me/player/play"
+            fetch(endpoint, {
+              method: "PUT",
+              headers: {
+                Authorization: `Bearer ${this.spotifyToken}`,
+              },
+              body: JSON.stringify({
+                //"uris": ["spotify:track:4bcMxSXijaZ9cGXynsRD3I"],
+                "uris": championSongs.map(item => item.uri),
+                "position_ms": 0
+              }),
+            }).then(async (result) => {
+              console.log(result)
+            })
+          }
+        })
       },
 
       /* eslint-disable no-unused-vars */
       async getChampionSongs(champID) {
+        var output = []
         await fetch("http://ddragon.leagueoflegends.com/cdn/11.11.1/data/en_US/champion.json").then(async (result) => {
-          result.json().then(async (data) => {
+          await result.json().then((data) => {
             for (const [key, value] of Object.entries(data.data)) {
               if (value.key == champID.toString()) {
-                var championSongs = {
-                  championName: value.name,
-                  songs: await this.getSongs(value.name)
-                }
-                return championSongs
+                console.log(value.name)
+                console.log(this.champSongData[value.name].Songs)
+                output = this.champSongData[value.name].Songs
+                return this.champSongData[value.name].Songs
               }
             }
-            var championSongsBlank = {
-              championName: "",
-              songs: []
-            }
-            return championSongsBlank
+            return false
+            // var championSongsBlank = {
+            //   championName: "",
+            //   songs: []
+            // }
+            // return championSongsBlank
           })
         })
+        console.log(output)
+        return output
       },
 
-      getSongs(champName) {
+      async getSongs(champName) {
         var data = { 
           champion: champName
         }
@@ -141,11 +146,13 @@
 
       document.getElementById("listenBtn").addEventListener("click", async () => {
         if (this.leagueData != undefined) {
-          console.log("listening")
+          console.log("started listener")
           setInterval(async () => {
+            console.log('listening')
             await this.callLocalLeagueApi(this.leagueData[0], this.leagueData[1], "/lol-champ-select/v1/current-champion")            
             if (this.leagueAPIReturn != "" && this.leagueAPIReturn.httpStatus != 404) {
               //clearInterval(poll)
+              console.log('valid return!')
               await this.playSpotify()    
             }
           }, 3000);
@@ -166,7 +173,8 @@
       return {
         loggingIn: false,
         spotifyToken: "",
-        leagueAPIReturn: ""
+        leagueAPIReturn: "",
+        champSongData:champSongMap
       }
     }
 

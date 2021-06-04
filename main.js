@@ -63,11 +63,11 @@ ipcMain.on("LoginToSpotifyWindow", (event, arg) => {
   win2.loadURL(arg)
   var wait = setInterval(() => {
     var currentURL = win2.webContents.getURL()
-    win2.webContents.on('did-redirect-navigation', function(event2, url) {
-      clearInterval(wait)
-      event.reply("CloseSpotifyLoginWindow", url.split("#access_token=").pop().split("&token_type=")[0]) 
-      win2.close()
-    })
+    // win2.webContents.on('did-redirect-navigation', function(event2, url) {
+    //   clearInterval(wait)
+    //   event.reply("CloseSpotifyLoginWindow", url.split("#access_token=").pop().split("&token_type=")[0]) 
+    //   win2.close()
+    // })
     if (currentURL.startsWith("http://localhost/callback")) {
       clearInterval(wait)
       event.reply("CloseSpotifyLoginWindow", currentURL.split("#access_token=").pop().split("&token_type=")[0]) 
@@ -155,14 +155,18 @@ ipcMain.on("GetCurrentMapping", async (event, arg) => {
       event.reply("ReturnCurrentMapping", ret)
     }
     else {
-      fs.readFile('./static/ChampionSongMapping.txt', function(err, data) {
-        if (err) {
-          throw err
-        }
-        var championMapping = JSON.parse(data.toString())
-        var ret = championMapping[arg.champion].Songs
-        event.reply("ReturnCurrentMapping", ret)
-      })
+      // fs.readFile('./static/ChampionSongMapping.txt', 'utf8', function(err, data) {
+      //   if (err) {
+      //     throw err
+      //   } else {
+      //     console.log('line 162')
+      //     const championMapping = JSON.parse(data.toString())
+      //     console.log(championMapping)
+      //     console.log(typeof(championMapping))
+      //     const ret = championMapping[arg.champion].Songs
+      //     event.reply("ReturnCurrentMapping", ret)
+      //   }
+      // })
     }
   }
   catch(e) {
