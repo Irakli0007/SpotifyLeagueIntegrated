@@ -66,11 +66,9 @@
 
       /* eslint-disable no-unused-vars */
       async playSpotify() {
-        console.log(this.leagueAPIReturn)
-        await this.getChampionSongs(this.leagueAPIReturn)
-        .then(championSongs => {
-          console.log(championSongs)
-          if (championSongs.length > 1) {
+        await this.getChampionSongs(this.leagueAPIReturn).then((championSongs) => {
+          if (championSongs.length > 0) {
+            console.log(championSongs)
             var endpoint = "https://api.spotify.com/v1/me/player/play"
             fetch(endpoint, {
               method: "PUT",
@@ -96,35 +94,15 @@
           await result.json().then((data) => {
             for (const [key, value] of Object.entries(data.data)) {
               if (value.key == champID.toString()) {
-                console.log(value.name)
-                console.log(this.champSongData[value.name].Songs)
                 output = this.champSongData[value.name].Songs
-                return this.champSongData[value.name].Songs
+                return
               }
             }
-            return false
-            // var championSongsBlank = {
-            //   championName: "",
-            //   songs: []
-            // }
-            // return championSongsBlank
+            output = []
           })
         })
-        console.log(output)
         return output
       },
-
-      async getSongs(champName) {
-        var data = { 
-          champion: champName
-        }
-        window.ipcRenderer.send("GetCurrentMapping", data)
-        window.ipcRenderer.on("ReturnCurrentMapping", (event, arg) => {
-          console.log(arg)
-          return arg
-        })
-        
-      }
 
     },
 
@@ -152,8 +130,7 @@
             await this.callLocalLeagueApi(this.leagueData[0], this.leagueData[1], "/lol-champ-select/v1/current-champion")            
             if (this.leagueAPIReturn != "" && this.leagueAPIReturn.httpStatus != 404) {
               //clearInterval(poll)
-              console.log('valid return!')
-              await this.playSpotify()    
+              await this.playSpotify()
             }
           }, 3000);
         }

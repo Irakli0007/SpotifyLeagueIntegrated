@@ -1,0 +1,1484 @@
+{
+  "Aatrox": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Ahri": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Akali": {
+    "Songs": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR"
+              },
+              "href": "https://api.spotify.com/v1/artists/66CXWjxzNUsdJxJ2JdwvnR",
+              "id": "66CXWjxzNUsdJxJ2JdwvnR",
+              "name": "Ariana Grande",
+              "type": "artist",
+              "uri": "spotify:artist:66CXWjxzNUsdJxJ2JdwvnR"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AG",
+            "AL",
+            "AM",
+            "AO",
+            "AR",
+            "AT",
+            "AU",
+            "AZ",
+            "BA",
+            "BB",
+            "BD",
+            "BE",
+            "BG",
+            "BH",
+            "BI",
+            "BJ",
+            "BO",
+            "BR",
+            "BS",
+            "BT",
+            "BW",
+            "BZ",
+            "CA",
+            "CH",
+            "CI",
+            "CL",
+            "CM",
+            "CO",
+            "CR",
+            "CV",
+            "CW",
+            "CY",
+            "CZ",
+            "DE",
+            "DJ",
+            "DK",
+            "DM",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FJ",
+            "FM",
+            "FR",
+            "GA",
+            "GB",
+            "GD",
+            "GE",
+            "GH",
+            "GM",
+            "GN",
+            "GQ",
+            "GR",
+            "GT",
+            "GW",
+            "GY",
+            "HK",
+            "HN",
+            "HR",
+            "HT",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JM",
+            "JO",
+            "JP",
+            "KE",
+            "KG",
+            "KH",
+            "KI",
+            "KM",
+            "KN",
+            "KR",
+            "KW",
+            "KZ",
+            "LA",
+            "LB",
+            "LC",
+            "LI",
+            "LK",
+            "LR",
+            "LS",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MG",
+            "MH",
+            "MK",
+            "ML",
+            "MN",
+            "MO",
+            "MR",
+            "MT",
+            "MU",
+            "MV",
+            "MW",
+            "MX",
+            "MY",
+            "MZ",
+            "NA",
+            "NE",
+            "NG",
+            "NI",
+            "NL",
+            "NO",
+            "NR",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PG",
+            "PH",
+            "PK",
+            "PL",
+            "PS",
+            "PT",
+            "PW",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "RW",
+            "SA",
+            "SB",
+            "SC",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SL",
+            "SM",
+            "SN",
+            "SR",
+            "ST",
+            "SV",
+            "SZ",
+            "TD",
+            "TG",
+            "TH",
+            "TL",
+            "TN",
+            "TO",
+            "TR",
+            "TT",
+            "TV",
+            "TW",
+            "TZ",
+            "UA",
+            "UG",
+            "US",
+            "UY",
+            "VC",
+            "VN",
+            "VU",
+            "WS",
+            "XK",
+            "ZA",
+            "ZM",
+            "ZW"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3tx8gQqWbGwqIGZHqDNrGe"
+          },
+          "href": "https://api.spotify.com/v1/albums/3tx8gQqWbGwqIGZHqDNrGe",
+          "id": "3tx8gQqWbGwqIGZHqDNrGe",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273c3af0c2355c24ed7023cd394",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02c3af0c2355c24ed7023cd394",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851c3af0c2355c24ed7023cd394",
+              "width": 64
+            }
+          ],
+          "name": "Sweetener",
+          "release_date": "2018-08-17",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:3tx8gQqWbGwqIGZHqDNrGe"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR"
+            },
+            "href": "https://api.spotify.com/v1/artists/66CXWjxzNUsdJxJ2JdwvnR",
+            "id": "66CXWjxzNUsdJxJ2JdwvnR",
+            "name": "Ariana Grande",
+            "type": "artist",
+            "uri": "spotify:artist:66CXWjxzNUsdJxJ2JdwvnR"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AG",
+          "AL",
+          "AM",
+          "AO",
+          "AR",
+          "AT",
+          "AU",
+          "AZ",
+          "BA",
+          "BB",
+          "BD",
+          "BE",
+          "BG",
+          "BH",
+          "BI",
+          "BJ",
+          "BO",
+          "BR",
+          "BS",
+          "BT",
+          "BW",
+          "BZ",
+          "CA",
+          "CH",
+          "CI",
+          "CL",
+          "CM",
+          "CO",
+          "CR",
+          "CV",
+          "CW",
+          "CY",
+          "CZ",
+          "DE",
+          "DJ",
+          "DK",
+          "DM",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FJ",
+          "FM",
+          "FR",
+          "GA",
+          "GB",
+          "GD",
+          "GE",
+          "GH",
+          "GM",
+          "GN",
+          "GQ",
+          "GR",
+          "GT",
+          "GW",
+          "GY",
+          "HK",
+          "HN",
+          "HR",
+          "HT",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JM",
+          "JO",
+          "JP",
+          "KE",
+          "KG",
+          "KH",
+          "KI",
+          "KM",
+          "KN",
+          "KR",
+          "KW",
+          "KZ",
+          "LA",
+          "LB",
+          "LC",
+          "LI",
+          "LK",
+          "LR",
+          "LS",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MG",
+          "MH",
+          "MK",
+          "ML",
+          "MN",
+          "MO",
+          "MR",
+          "MT",
+          "MU",
+          "MV",
+          "MW",
+          "MX",
+          "MY",
+          "MZ",
+          "NA",
+          "NE",
+          "NG",
+          "NI",
+          "NL",
+          "NO",
+          "NR",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PG",
+          "PH",
+          "PK",
+          "PL",
+          "PS",
+          "PT",
+          "PW",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "RW",
+          "SA",
+          "SB",
+          "SC",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SL",
+          "SM",
+          "SN",
+          "SR",
+          "ST",
+          "SV",
+          "SZ",
+          "TD",
+          "TG",
+          "TH",
+          "TL",
+          "TN",
+          "TO",
+          "TR",
+          "TT",
+          "TV",
+          "TW",
+          "TZ",
+          "UA",
+          "UG",
+          "US",
+          "UY",
+          "VC",
+          "VN",
+          "VU",
+          "WS",
+          "XK",
+          "ZA",
+          "ZM",
+          "ZW"
+        ],
+        "disc_number": 1,
+        "duration_ms": 198160,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71808582"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4OafepJy2teCjYJbvFE60J"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4OafepJy2teCjYJbvFE60J",
+        "id": "4OafepJy2teCjYJbvFE60J",
+        "is_local": false,
+        "name": "breathin",
+        "popularity": 74,
+        "preview_url": null,
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:4OafepJy2teCjYJbvFE60J"
+      }
+    ],
+    "Playlist": []
+  },
+  "Alistar": {
+    "Songs": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5NGO30tJxFlKixkPSgXcFE"
+              },
+              "href": "https://api.spotify.com/v1/artists/5NGO30tJxFlKixkPSgXcFE",
+              "id": "5NGO30tJxFlKixkPSgXcFE",
+              "name": "The Police",
+              "type": "artist",
+              "uri": "spotify:artist:5NGO30tJxFlKixkPSgXcFE"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AG",
+            "AL",
+            "AM",
+            "AO",
+            "AR",
+            "AT",
+            "AU",
+            "AZ",
+            "BA",
+            "BB",
+            "BD",
+            "BE",
+            "BF",
+            "BG",
+            "BH",
+            "BI",
+            "BJ",
+            "BN",
+            "BO",
+            "BR",
+            "BS",
+            "BT",
+            "BW",
+            "BY",
+            "BZ",
+            "CA",
+            "CH",
+            "CI",
+            "CL",
+            "CM",
+            "CO",
+            "CR",
+            "CV",
+            "CW",
+            "CY",
+            "CZ",
+            "DE",
+            "DJ",
+            "DK",
+            "DM",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FJ",
+            "FM",
+            "FR",
+            "GA",
+            "GB",
+            "GD",
+            "GE",
+            "GH",
+            "GM",
+            "GN",
+            "GQ",
+            "GR",
+            "GT",
+            "GW",
+            "GY",
+            "HK",
+            "HN",
+            "HR",
+            "HT",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JM",
+            "JO",
+            "JP",
+            "KE",
+            "KG",
+            "KH",
+            "KI",
+            "KM",
+            "KN",
+            "KR",
+            "KW",
+            "KZ",
+            "LA",
+            "LB",
+            "LC",
+            "LI",
+            "LK",
+            "LR",
+            "LS",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MG",
+            "MH",
+            "MK",
+            "ML",
+            "MN",
+            "MO",
+            "MR",
+            "MT",
+            "MU",
+            "MV",
+            "MW",
+            "MX",
+            "MY",
+            "MZ",
+            "NA",
+            "NE",
+            "NG",
+            "NI",
+            "NL",
+            "NO",
+            "NP",
+            "NR",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PG",
+            "PH",
+            "PK",
+            "PL",
+            "PS",
+            "PT",
+            "PW",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "RW",
+            "SA",
+            "SB",
+            "SC",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SL",
+            "SM",
+            "SN",
+            "SR",
+            "ST",
+            "SV",
+            "SZ",
+            "TD",
+            "TG",
+            "TH",
+            "TL",
+            "TN",
+            "TO",
+            "TR",
+            "TT",
+            "TV",
+            "TW",
+            "TZ",
+            "UA",
+            "UG",
+            "US",
+            "UY",
+            "UZ",
+            "VC",
+            "VN",
+            "VU",
+            "WS",
+            "XK",
+            "ZA",
+            "ZM",
+            "ZW"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5W9OT0a5iZlBr83a9WMKFY"
+          },
+          "href": "https://api.spotify.com/v1/albums/5W9OT0a5iZlBr83a9WMKFY",
+          "id": "5W9OT0a5iZlBr83a9WMKFY",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273c8e97cafeb2acb85b21a777e",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02c8e97cafeb2acb85b21a777e",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851c8e97cafeb2acb85b21a777e",
+              "width": 64
+            }
+          ],
+          "name": "Synchronicity (Remastered 2003)",
+          "release_date": "1983-06-17",
+          "release_date_precision": "day",
+          "total_tracks": 11,
+          "type": "album",
+          "uri": "spotify:album:5W9OT0a5iZlBr83a9WMKFY"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5NGO30tJxFlKixkPSgXcFE"
+            },
+            "href": "https://api.spotify.com/v1/artists/5NGO30tJxFlKixkPSgXcFE",
+            "id": "5NGO30tJxFlKixkPSgXcFE",
+            "name": "The Police",
+            "type": "artist",
+            "uri": "spotify:artist:5NGO30tJxFlKixkPSgXcFE"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AG",
+          "AL",
+          "AM",
+          "AO",
+          "AR",
+          "AT",
+          "AU",
+          "AZ",
+          "BA",
+          "BB",
+          "BD",
+          "BE",
+          "BF",
+          "BG",
+          "BH",
+          "BI",
+          "BJ",
+          "BN",
+          "BO",
+          "BR",
+          "BS",
+          "BT",
+          "BW",
+          "BY",
+          "BZ",
+          "CA",
+          "CH",
+          "CI",
+          "CL",
+          "CM",
+          "CO",
+          "CR",
+          "CV",
+          "CW",
+          "CY",
+          "CZ",
+          "DE",
+          "DJ",
+          "DK",
+          "DM",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FJ",
+          "FM",
+          "FR",
+          "GA",
+          "GB",
+          "GD",
+          "GE",
+          "GH",
+          "GM",
+          "GN",
+          "GQ",
+          "GR",
+          "GT",
+          "GW",
+          "GY",
+          "HK",
+          "HN",
+          "HR",
+          "HT",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JM",
+          "JO",
+          "JP",
+          "KE",
+          "KG",
+          "KH",
+          "KI",
+          "KM",
+          "KN",
+          "KR",
+          "KW",
+          "KZ",
+          "LA",
+          "LB",
+          "LC",
+          "LI",
+          "LK",
+          "LR",
+          "LS",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MG",
+          "MH",
+          "MK",
+          "ML",
+          "MN",
+          "MO",
+          "MR",
+          "MT",
+          "MU",
+          "MV",
+          "MW",
+          "MX",
+          "MY",
+          "MZ",
+          "NA",
+          "NE",
+          "NG",
+          "NI",
+          "NL",
+          "NO",
+          "NP",
+          "NR",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PG",
+          "PH",
+          "PK",
+          "PL",
+          "PS",
+          "PT",
+          "PW",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "RW",
+          "SA",
+          "SB",
+          "SC",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SL",
+          "SM",
+          "SN",
+          "SR",
+          "ST",
+          "SV",
+          "SZ",
+          "TD",
+          "TG",
+          "TH",
+          "TL",
+          "TN",
+          "TO",
+          "TR",
+          "TT",
+          "TV",
+          "TW",
+          "TZ",
+          "UA",
+          "UG",
+          "US",
+          "UY",
+          "UZ",
+          "VC",
+          "VN",
+          "VU",
+          "WS",
+          "XK",
+          "ZA",
+          "ZM",
+          "ZW"
+        ],
+        "disc_number": 1,
+        "duration_ms": 253920,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GBAAM0201110"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1JSTJqkT5qHq8MDJnJbRE1"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1JSTJqkT5qHq8MDJnJbRE1",
+        "id": "1JSTJqkT5qHq8MDJnJbRE1",
+        "is_local": false,
+        "name": "Every Breath You Take",
+        "popularity": 84,
+        "preview_url": null,
+        "track_number": 7,
+        "type": "track",
+        "uri": "spotify:track:1JSTJqkT5qHq8MDJnJbRE1"
+      }
+    ],
+    "Playlist": []
+  },
+  "Amumu": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Anivia": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Annie": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Aphelios": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Ashe": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Aurelion Sol": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Azir": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Bard": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Blitzcrank": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Brand": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Braum": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Caitlyn": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Camille": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Cassiopeia": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Cho'Gath": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Corki": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Darius": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Diana": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Draven": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Dr. Mundo": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Ekko": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Elise": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Evelynn": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Ezreal": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Fiddlesticks": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Fiora": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Fizz": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Galio": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Gangplank": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Garen": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Gnar": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Gragas": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Graves": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Gwen": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Hecarim": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Heimerdinger": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Illaoi": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Irelia": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Ivern": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Janna": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Jarvan IV": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Jax": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Jayce": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Jhin": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Jinx": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Kai'Sa": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Kalista": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Karma": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Karthus": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Kassadin": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Katarina": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Kayle": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Kayn": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Kennen": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Kha'Zix": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Kindred": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Kled": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Kog'Maw": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "LeBlanc": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Lee Sin": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Leona": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Lillia": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Lissandra": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Lucian": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Lulu": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Lux": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Malphite": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Malzahar": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Maokai": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Master Yi": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Miss Fortune": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Wukong": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Mordekaiser": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Morgana": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Nami": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Nasus": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Nautilus": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Neeko": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Nidalee": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Nocturne": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Nunu & Willump": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Olaf": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Orianna": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Ornn": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Pantheon": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Poppy": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Pyke": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Qiyana": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Quinn": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Rakan": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Rammus": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Rek'Sai": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Rell": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Renekton": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Rengar": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Riven": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Rumble": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Ryze": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Samira": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Sejuani": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Senna": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Seraphine": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Sett": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Shaco": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Shen": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Shyvana": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Singed": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Sion": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Sivir": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Skarner": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Sona": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Soraka": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Swain": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Sylas": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Syndra": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Tahm Kench": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Taliyah": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Talon": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Taric": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Teemo": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Thresh": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Tristana": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Trundle": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Tryndamere": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Twisted Fate": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Twitch": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Udyr": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Urgot": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Varus": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Vayne": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Veigar": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Vel'Koz": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Vi": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Viego": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Viktor": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Vladimir": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Volibear": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Warwick": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Xayah": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Xerath": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Xin Zhao": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Yasuo": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Yone": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Yorick": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Yuumi": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Zac": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Zed": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Ziggs": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Zilean": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Zoe": {
+    "Songs": [],
+    "Playlist": []
+  },
+  "Zyra": {
+    "Songs": [],
+    "Playlist": []
+  }
+}
