@@ -89,6 +89,7 @@
 
       /* eslint-disable no-unused-vars */
       async getChampionSongs(champID) {
+        //TODO get version first and get the champions based on version
         var output = []
         await fetch("http://ddragon.leagueoflegends.com/cdn/11.11.1/data/en_US/champion.json").then(async (result) => {
           await result.json().then((data) => {
@@ -124,7 +125,6 @@
 
       document.getElementById("listenBtn").addEventListener("click", async () => {
         if (this.leagueData != undefined) {
-          console.log("started listener")
           setInterval(async () => {
             console.log('listening')
             await this.callLocalLeagueApi(this.leagueData[0], this.leagueData[1], "/lol-champ-select/v1/current-champion")            
@@ -151,7 +151,7 @@
         loggingIn: false,
         spotifyToken: "",
         leagueAPIReturn: "",
-        champSongData:champSongMap
+        champSongData: champSongMap
       }
     }
 

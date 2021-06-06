@@ -17,7 +17,6 @@
         <v-col cols="2" :key="item.id">
           <v-card class="mx-6 my-6" :id="`${item.id}`">
             <v-card-title>{{ item.name }}</v-card-title>
-            <!--<v-img max-width="120" max-height="120" :src="require(`@/assets/champion_images/11.11.1/img/champion/${item.id}.png`)"></v-img> -->
             <v-img max-width="120" max-height="120" :src="`http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${item.id}.png`"></v-img>
             <v-list-item @click="map(item)">
               <v-list-item-icon>
